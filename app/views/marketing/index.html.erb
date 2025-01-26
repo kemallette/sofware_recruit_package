@@ -1,38 +1,12 @@
-<body>
   <div class="bg-white">
   <main>
+
+  <%= render "layouts/top_nav" %>
+
   <div class="lg:relative bg-gray-900">
-    <header class="absolute top-0 z-50" style="right:  0;left: 0;">
-      <nav class="max-w-7xl mx-auto " aria-label="Top">
-        <div class="flex w-full items-center justify-between border-b border-gray-600 py-4 lg:border-none">
-          <div class="flex justify-start items-center md:flex-1">
-            <a href="/">
-              <span class="logo"><%= image_tag "logo.png", alt: "SOFware LLC", class: "object-contain h-16 w-auto" %></span>
-            </a>
-          </div>
-          <div>
-            <div class="hidden ml-10 space-x-8 md:flex text-xl">
-              <a href="/forge.html" class="font-bold text-white hover:text-indigo-50">FORGE</a>
-              <a href="/about.html" class="font-bold text-white hover:text-indigo-50">About</a>
-              <a href="/careers.html" class="font-bold text-white hover:text-indigo-50">Careers</a>
-            </div>
-          </div>
-
-        </div>
-        <div class="py-4 flex flex-wrap justify-center space-x-6 md:hidden">
-          <a href="/" class="text-base font-medium text-white hover:text-indigo-50">Home</a>
-          <a href="/about.html" class="text-base font-medium text-white hover:text-indigo-50">About</a>
-          <a href="/careers.html" class="text-base font-medium text-white hover:text-indigo-50">
-            Careers
-          </a>
-          <a href="/forge.html" class="text-base font-medium text-white hover:text-indigo-50">FORGE</a>
-        </div>
-      </nav>
-    </header>
-
     <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left min-h-96" style="min-height: 42rem;">
       <div class="lg:w-1/2  z-10 absolute text-white">
-        <h1 class="mt-7 inter sm:text-3xl md:text-6xl">
+        <h1 class="mt-7 inter sm:text-3xl md:text-6xl leading-[2.9rem]">
           Game changing insights for<br>
           <span class="text-lime-500 xl:inline font-bold">elite teams</span>
         </h1>
@@ -40,19 +14,16 @@
           Humans are more important than hardware. Select the best, invest in their development, and identify those with
           leadership potential.
         </p>
-        <p>
-    <a href="/demo-request.html" class="ml-8 mr-3 h-9 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-gradient-to-r from-green-600 to-lime-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:from-green-700 hover:to-lime-700 focus:outline-none focus:ring-2 focus:ring-lime-600 focus:ring-offset-2" style="
-    margin: 2rem 0;
-    padding: 1.5rem;
-    font-size: 1.1rem;
-">
-              Request a Demo</a>
-            </p>
+        <div class="mt-10 flex items-center gap-x-6">
+          <a href="/demo"
+            class="ml-8 mr-3 h-9 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-gradient-to-r from-green-600 to-lime-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:from-green-700 hover:to-lime-700 focus:outline-none focus:ring-2 focus:ring-lime-600 focus:ring-offset-2"
+            style="margin: 2rem 0; padding: 1.5rem;font-size: 1.1rem; ">
+            Request a Demo</a>
+          <a href="/forge" class="text-lg/6 font-semibold">Learn more <span aria-hidden="true">→</span></a>
+        </div>
     </div>
     <img class="absolute inset-0 w-full h-full object-cover z-0 opacity-[.1]" src="https://sofwarellc.com/assets/images/training.jpg" alt="" ></div>
   </div>
-
-
   <!-- Selection and Development -->
   <div class="overflow-hidden bg-white py-14 sm:py-20">
     <div class="mx-auto max-w-7xl pr-6 lg:pr-8">
@@ -123,7 +94,6 @@
 
   <!-- A combination of hands on help -->
   <div class="relative bg-gray-900">
-
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
       <div class="relative ">
         <img src="https://sofwarellc.com/assets/images/tablet.jpg" alt="Product screenshot" class="opacity-25 object-cover w-full h-full">
@@ -131,7 +101,7 @@
       </div>
       <div class="lg:pt-4 lg:px-16">
         <div class="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
-          <h3 class="mt-2 text-3xl leading-8 font-semibold tracking-tight text-white sm:text-4xl">
+          <h3 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-[2.9rem] leading-[2.9rem]">
             Best practices, hands-on experts, and tailorable software
           </h3>
           <p class="mt-4 text-lg text-gray-300">With SOFware, you get a dedicated team member to help you apply FORGE to
@@ -310,5 +280,3 @@
       </div>
     </footer>
   </div>
-</body>
-</html>

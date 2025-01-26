@@ -13,4 +13,7 @@ class MarketingController < ApplicationController
 
   def careers
   end
+
+  def demo
+  end
 end

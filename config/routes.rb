@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   get "marketing/index"
-  get "marketing/forge"
-  get "marketing/about"
-  get "marketing/contact"
-  get "marketing/careers"
+  get "forge" => "marketing#forge"
+  get "about" => "marketing#about"
+  get "contact" => "marketing#contact"
+  get "careers" => "marketing#careers"
+  get "demo" => "marketing#demo"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
