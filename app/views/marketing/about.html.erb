@@ -1,4 +1,42 @@
-<div>
-  <h1 class="font-bold text-4xl">Marketing#about</h1>
-  <p>Find me in app/views/marketing/about.html.erb</p>
+<%= render "layouts/top_nav" %>
+
+<div class="lg:relative bg-gray-900">
+  <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left h-full min-h-[57rem]">
+    <div class="z-10 absolute text-white">
+      <div class="flex">
+        <div class="grow">
+          <h1 class="mt-7 inter sm:text-3xl md:text-6xl leading-[2.9rem] max-w-3xl">
+            Designed by Operators, for Operators<br>
+          </h1>
+          <p class="mt-3 max-w-md text-xl leading-[1.5] md:mt-5 md:max-w-3xl">SOFware was founded by a team of NSW
+            operators with a combined 50+ years of NSW/SOF
+            experience. Our CEO and lead architect, John Dowd, is a former SEAL Platoon Commander who has fostered a
+            deep
+            working knowledge of the Assessment, Selection, Training, Development, and Mentorship of elite forces at the
+            highest levels of SOF and Federal Law Enforcement.
+          </p>
+          <p class="pt-8 text-xl leading-[1.5] md:mt-5 md:max-w-3xl">
+            SOFware LLC's approach to these communities is to serve them with the same humility, commitment, and passion
+            with which they conduct their own critical mission sets.</p>
+
+          <p class="pt-8 text-xl leading-[1.5] md:mt-5 md:max-w-3xl">
+            SOFware's mission is to improve people systems for organizations that risk their lives to defend ours. Our
+            team of professionals work directly with end users to ensure their systems are developed, designed,
+            maintained, and secure.
+          </p>
+        </div>
+        <div class="grow ml-24 mt-12">
+          <%= image_tag 'ceo.jpeg', class: "w-80 rounded-lg" %>
+          <h3 class="font-semibold text-lg pt-4">John Dowd</h3>
+          <p>CEO and Lead Architect</p>
+        </div>
+      </div>
+    </div>
+    <%= image_tag 'flag-salute.jpg', class: "absolute inset-0 w-full h-full object-cover z-0 opacity-[.1]" %>
+  </div>
+
+  <div class="container center text-center text-gray-500 mx-auto px-8 text-lg pb-20">
+    <p><img class="mx-auto" width="150"
+        src="http://sofwarellc.com/assets/images/Service-Disabled-Veteran-Owned-Certified.png"></p>
+  </div>
 </div>

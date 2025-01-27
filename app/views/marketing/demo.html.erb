@@ -1,1 +1,81 @@
-Demo
+<div class="bg-gray-900 h-24">
+  <%= render "layouts/top_nav" %>
+</div>
+
+<script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
+
+<div class="overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 lg:py-24">
+  <div class="relative mx-auto max-w-xl">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Request a demo</h2>
+      <p class="mt-4 text-lg leading-6 text-gray-500">We're happy to brief you on our applications, answer your questions, and see if SOFware LLC is right for you.</p>
+    </div>
+    <div class="mt-12">
+      <form action="https://fieldgoal.io/f/CLAgN7" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+        <div>
+          <label for="first-name" class="block text-sm font-medium text-gray-700">First name</label>
+          <div class="mt-1">
+            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-lime-600 focus:ring-lime-600">
+          </div>
+        </div>
+        <div>
+          <label for="last-name" class="block text-sm font-medium text-gray-700">Last name</label>
+          <div class="mt-1">
+            <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-lime-600 focus:ring-lime-600">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="organization" class="block text-sm font-medium text-gray-700">Organization</label>
+          <div class="mt-1">
+            <input type="text" name="organization" id="organization" autocomplete="organization" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-lime-600 focus:ring-lime-600">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="email" class="block text-sm font-medium text-gray-700">Business Email</label>
+          <div class="mt-1">
+            <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-lime-600 focus:ring-lime-600">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="phone-number" class="block text-sm font-medium text-gray-700">Phone Number</label>
+          <div class="relative mt-1 rounded-md shadow-sm">
+            <div class="absolute inset-y-0 left-0 flex items-center">
+              <label for="country" class="sr-only">Country</label>
+              <select id="country" name="country" class="h-full rounded-md border-transparent bg-transparent py-0 pl-4 pr-8 text-gray-500 focus:border-lime-600 focus:ring-lime-600">
+                <option>US</option>
+                <option>CA</option>
+                <option>EU</option>
+              </select>
+            </div>
+            <input type="text" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-gray-300 py-3 px-4 pl-20 focus:border-lime-600 focus:ring-lime-600" placeholder="+1 (555) 987-6543">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="message" class="block text-sm font-medium text-gray-700">How did you hear about us?</label>
+          <div class="mt-1">
+            <textarea id="message" name="message" rows="4" class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-lime-600 focus:ring-lime-600"></textarea>
+          </div>
+        </div>
+        <div class="g-recaptcha" data-sitekey="6LcbOQUkAAAAAAbUlYEyzZcILWcNjya4cNIDmqmw"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-2sle9fcusnuq" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcbOQUkAAAAAAbUlYEyzZcILWcNjya4cNIDmqmw&amp;co=aHR0cHM6Ly9zb2Z3YXJlbGxjLmNvbTo0NDM.&amp;hl=en&amp;v=p09oe8YIFfKgcnqQ9m9k4aiB&amp;size=normal&amp;cb=vwtfrxx4u094"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+        <div class="sm:col-span-2">
+          <button type="submit" class="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-green-600 to-lime-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:from-green-700 hover:to-lime-700 focus:outline-none focus:ring-2 focus:ring-lime-600 focus:ring-offset-2">Request your demo</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <footer aria-labelledby="footer-heading">
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <div class="max-w-7xl mx-auto pb-8 px-4 sm:px-6 lg:px-8">
+        <div class="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
+          <p class="mt-8 text-base text-gray-400 md:mt-0">
+            © 2025 SOFware LLC, All rights reserved.
+          </p>
+          <p class="mt-8 text-base text-gray-400 md:mt-0">
+            <a href="/privacy.html">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
