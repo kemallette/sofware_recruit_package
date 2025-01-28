@@ -2,24 +2,35 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
+const TabPanel = {
+  init: function() {
+    this.tabs = document.querySelectorAll('.tab');
+    this.tabPanel = document.querySelectorAll('.tab-panel');
 
-$(document).ready(function() {
-  // Optional: Show the first panel by default
-  $('.tab').first().addClass('bg-white border-l-[1px] border-t-[1px] border-b-[1px]');
-  $('.tab-panel').hide().first().show();
+    this.tabs.forEach((tab) => {
+      tab.addEventListener('click', (event) => {
+        this.toggleTab(event);
+      });
+    });
+  },
+  toggleTab: function(event) {
+    const target = event.currentTarget;
+    const panel = document.getElementById(target.dataset.panel);
+    const activeClasses = ['bg-white', 'border-l-[1px]', 'border-t-[1px]', 'border-b-[1px]'];
 
-  $('.tab').on('click', function() {
-    // Remove highlight from all tabs
-    $('.tab').removeClass('bg-white border-l-[1px] border-t-[1px] border-b-[1px]');
+    this.tabs.forEach((tab) => {
+      tab.classList.remove(...activeClasses);
+    });
 
-    // Highlight this tab
-    $(this).addClass('bg-white border-l-[1px] border-t-[1px] border-b-[1px]');
+    this.tabPanel.forEach((panel) => {
+      panel.classList.add('hidden');
+    });
 
-    // Hide all panels
-    $('.tab-panel').addClass('hidden').hide();
+    target.classList.add(...activeClasses);
+    panel.classList.remove('hidden');
+  }
+};
 
-    // Show the targeted panel
-    const targetPanel = $(this).data('panel');
-    $('#' + targetPanel).removeClass('hidden').show();
-  });
+$(document).on('turbo:load', function() {
+  TabPanel.init();
 });
